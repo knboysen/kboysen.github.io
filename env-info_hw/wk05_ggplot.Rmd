@@ -181,14 +181,16 @@ co_per_capita
 ```
 
 ```{r task2: average per capita emissions}
-co_average<- inner_join(co2_long, popn, by = c("Country", "Year")) %>% 
+inner_join(co2_long, popn, by = c("Country", "Year")) %>% 
   mutate(per_capita = CO2/Pop) %>% 
   filter(Country!="EU28", Country!="World") %>% 
-  group_by(Country) %>% 
+  group_by(Country) %>%   
   summarise(ave_per_capita=mean(per_capita)) %>% 
   top_n(5, ave_per_capita) %>% 
-  arrange(desc(ave_per_capita)) 
-co_average
+  arrange(desc(ave_per_capita))
+
+##this group_by and then Summarize sequence does not work if you load plyr after dplyr. 
+
 
 ```
 
