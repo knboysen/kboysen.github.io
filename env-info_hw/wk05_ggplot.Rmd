@@ -131,12 +131,13 @@ co2
 ```
 
 ```{r read co2 & popn}
+   # install.packages('plyr')
 library(readr)
 library(readxl) # install.packages('readxl')
 library(dplyr)
 library(tidyr)
 library(httr)   # install.packages('httr')
-library(plyr)   # install.packages('plyr')
+
 
 print(getwd())
 
