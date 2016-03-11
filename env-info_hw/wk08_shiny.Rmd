@@ -1,0 +1,33 @@
+---
+title: "week8"
+author: "Kristen Boysen"
+date: "February 26, 2016"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+##Tutorial
+```{r shiny tutorial, eval= FALSE}
+shiny::runGitHub("knboysen", username = getOption("knboysen"),
+    ref = "master", subdir = "env-info_hw/App-1/", port = NULL,
+    launch.browser = getOption("shiny.launch.browser", interactive()))
+
+
+```
+
+[Link to my shiny app](https://knboysen.shinyapps.io/App-1/)
+
+##Group App
+
+```{r Shiny, eval=F}
+#shiny::runGitHub(jkidson.github.io/env-info_hw/test_shiny1)
+
+shiny::runGitHub("jkidson", username = getOption("jkidson"),
+    ref = "master", subdir = "env-info_hw/test_shiny1/", port = NULL,
+    launch.browser = getOption("shiny.launch.browser", interactive()))
+
+```
+
+[Link to Group App](https://jkidson.shinyapps.io/wk08_shiny)
